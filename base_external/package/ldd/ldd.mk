@@ -14,19 +14,13 @@ LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
 
 define LDD_BUILD_CMDS
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) all
+    $(MAKE) -C $(@D)/misc-modules modules
+	$(MAKE) -C $(@D)/scull modules
 endef
 
-# define LDD_INSTALL_TARGET_CMDS
-# 	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/etc/finder-app/conf/
-# 	$(INSTALL) -m 0755 $(@D)/conf/* $(TARGET_DIR)/etc/finder-app/conf/
-#     $(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
-# 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin
-# 	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin
-# 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin
-# 
-#     $(INSTALL) -m 0755 $(@D)/server/aesdsocket $(TARGET_DIR)/usr/bin
-#     $(INSTALL) -m 0755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/S99aesdsocket
-# endef
+define LDD_INSTALL_TARGET_CMDS
+ 	$(INSTALL) -m 0755 $(@D)/scull/scull.ko $(TARGET_DIR)/lib/modules
+	$(INSTALL) -m 0755 $(@D)/misc-modules/hello.ko $(TARGET_DIR)/usr/bin
+endef
 
 $(eval $(generic-package))
