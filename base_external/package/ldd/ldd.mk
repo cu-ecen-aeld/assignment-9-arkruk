@@ -5,7 +5,7 @@
 #
 ##############################################################
 
-LDD_VERSION = cc6c13de47d13be1bd95c3118b31931d004c85ac
+LDD_VERSION = b9e9fcf8908c61070b839c76be89af0e77ba749b
 LDD_SITE = git@github.com:cu-ecen-aeld/assignment-7-arkruk.git
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
