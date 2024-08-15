@@ -5,7 +5,7 @@
 #
 ##############################################################
 
-LDD_VERSION = 718cbdf07e082486e008537660e6b9fb4fb07a45
+LDD_VERSION = f5019f866887ed84a1d47555b6c3a450a11c462d
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly  $(MAKE) -C $(@D)/misc-modules modules
 #	$(MAKE) -C $(@D)/scull modules
 # with ssh keys and the automated build/test system.
