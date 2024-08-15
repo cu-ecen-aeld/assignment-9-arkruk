@@ -18,7 +18,6 @@ define LDD_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/scull/scull_load $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/modules-start-stop $(TARGET_DIR)/etc/init.d/S98lddmodules
 endef
 
 $(eval $(kernel-module))

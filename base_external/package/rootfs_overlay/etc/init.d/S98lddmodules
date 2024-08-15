@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "Starting module_load scull_load spripst"
+    cd //lib/modules/`uname -r`/extra
+    scull_load scull
+    module_load faulty
+    modprobe hello
+    ;;
+  stop)
+    echo "Run module_unload scull_unload spripst"
+    cd //lib/modules/`uname -r`/extra
+    scull_unload scull
+    module_unload faulty
+    rmmod hello
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+  exit 1
+esac
+
+exit 0
