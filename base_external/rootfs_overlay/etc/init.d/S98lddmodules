@@ -7,6 +7,7 @@ case "$1" in
     scull_load scull
     module_load faulty
     modprobe hello
+    aesdchar_load aesdchar
     ;;
   stop)
     echo "Run module_unload scull_unload spripst"
@@ -14,6 +15,7 @@ case "$1" in
     scull_unload scull
     module_unload faulty
     rmmod hello
+    aesdchar_unload aesdchar
     ;;
   *)
     echo "Usage: $0 {start|stop}"
