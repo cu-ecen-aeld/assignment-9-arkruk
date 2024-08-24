@@ -5,7 +5,7 @@
 #
 ##############################################################
 
-AESD_CHAR_DRIVER_VERSION = cbb3b2233eb7c14b9e10e64688bfff6f7add4d48
+AESD_CHAR_DRIVER_VERSION = cc3fdc8bc9c793b655cbb286311e8a5a451c5a4d
 AESD_CHAR_DRIVER_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-arkruk.git
 AESD_CHAR_DRIVER_SITE_METHOD = git
 AESD_CHAR_DRIVER_GIT_SUBMODULES = YES
